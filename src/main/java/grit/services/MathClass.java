@@ -32,7 +32,7 @@ public class MathClass {
 	
 	@RequestMapping(value = "/div", method = RequestMethod.GET)
 	public String div(@RequestParam double[] x) {
-		return Double.toString(x[0] / x[1]);
+		return x[1] == 0 ? "Div by 0" : "The division result is... <br><h1>" + Double.toString(x[0] / x[1]);
 	}
 	
 	@RequestMapping(value = "/math", method = RequestMethod.GET)
